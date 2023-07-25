@@ -35,7 +35,7 @@ function randomColor(colors) {
     return colors[Math.floor(Math.random() * colors.length)]
 }
 
-function getDistance(x1, y1, x2, y2) {
+function distance(x1, y1, x2, y2) {
     let xDistance = x2 - x1;
     let yDistance = y2 - y1;
     return Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
@@ -86,9 +86,6 @@ function animate() {
         particle.update();
     });
 
-    let d = getDistance(circle1.x, circle1.y, circle2.x, circle2.y);
-    if (d < circle1.radius + circle2.radius) circle1.color = "red";
-    else circle1.color = "blue";
 }
 
 init();
